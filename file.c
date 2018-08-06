@@ -81,3 +81,15 @@ int nb_elements(File* pfile) {
   }
   return valeur_retour;
 }
+
+bool est_vide(File* pfile) {
+  bool valeur_retour = false;
+  if (pfile) {
+    if (pfile->nb_elements == 0
+        && pfile->pointeur_tete == NULL
+        && pfile->pointeur_queue == NULL) {
+      valeur_retour = true;
+    }
+  }
+  return valeur_retour;
+}

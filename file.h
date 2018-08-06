@@ -20,5 +20,6 @@ File* creation_file(unsigned int taille);
 Element* creation_element(int valeur);
 int enfiler(File* pfile, Element* pelement);
 int nb_elements(File* pfile);
+bool est_vide(File* pfile);
 
 #endif // __FILE

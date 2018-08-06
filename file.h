@@ -17,5 +17,6 @@ struct Element {
 };
 
 File* creation_file(int taille);
+Element* creation_element(int valeur);
 
 #endif // __FILE

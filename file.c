@@ -22,7 +22,6 @@ Element* creation_element(int valeur) {
 File* creation_file(int taille) {
   File* pfile = (File*) malloc(sizeof(File));
   if (pfile) {
-    pfile->element = NULL;
     pfile->pointeur_tete = NULL;
     pfile->pointeur_queue = NULL;
     pfile->taille = taille;

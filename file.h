@@ -5,7 +5,6 @@ typedef struct File File;
 typedef struct Element Element;
 
 struct File {
-  void* element;
   void* pointeur_tete;
   void* pointeur_queue;
   int taille;

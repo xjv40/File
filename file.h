@@ -18,5 +18,6 @@ struct Element {
 
 File* creation_file(unsigned int taille);
 Element* creation_element(int valeur);
+int enfiler(File* pfile, Element* pelement);
 
 #endif // __FILE

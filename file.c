@@ -34,3 +34,31 @@ File* creation_file(unsigned int taille) {
   }
   return pfile;
 }
+
+int enfiler(File* pfile, Element* pelement) {
+  int valeur_retour = 0;
+  if (!pfile || !pelement) {
+    valeur_retour = -1;
+  }
+  else {
+    if (pfile->nb_elements >= pfile->taille) {
+      valeur_retour = -1;
+    }
+    else {
+      if (!pfile->pointeur_tete) {
+        pfile->pointeur_tete = pelement;
+      }
+
+      if (!pfile->pointeur_queue) {
+        pfile->pointeur_queue = pelement;
+      }
+
+      pelement->element_suivant = pfile->pointeur_queue;
+      pfile->pointeur_queue = pelement;
+      pfile->nb_elements++;
+
+      valeur_retour = 0;
+    }
+  }
+  return valeur_retour;
+}

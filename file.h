@@ -13,6 +13,7 @@ struct File {
 
 struct Element {
   int valeur;
+  struct Element* element_suivant;
 };
 
 File* creation_file(int taille);

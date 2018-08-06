@@ -15,6 +15,7 @@ Element* creation_element(int valeur) {
   Element* pelement = (Element*) malloc(sizeof(Element));
   if (pelement) {
     pelement->valeur = valeur;
+    pelement->element_suivant = NULL;
   }
   return pelement;
 }

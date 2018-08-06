@@ -20,7 +20,11 @@ Element* creation_element(int valeur) {
   return pelement;
 }
 
-File* creation_file(int taille) {
+File* creation_file(unsigned int taille) {
+  if (taille == 0) {
+    return NULL;
+  }
+
   File* pfile = (File*) malloc(sizeof(File));
   if (pfile) {
     pfile->pointeur_tete = NULL;

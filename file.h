@@ -16,7 +16,7 @@ struct Element {
   struct Element* element_suivant;
 };
 
-File* creation_file(int taille);
+File* creation_file(unsigned int taille);
 Element* creation_element(int valeur);
 
 #endif // __FILE

@@ -2,6 +2,7 @@
 #define __FILE
 
 typedef struct File File;
+typedef struct Element Element;
 
 struct File {
   void* element;
@@ -9,6 +10,10 @@ struct File {
   void* pointeur_queue;
   int taille;
   int nb_elements;
+};
+
+struct Element {
+  int valeur;
 };
 
 File* creation_file(int taille);

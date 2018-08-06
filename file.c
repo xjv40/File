@@ -62,3 +62,22 @@ int enfiler(File* pfile, Element* pelement) {
   }
   return valeur_retour;
 }
+
+int nb_elements(File* pfile) {
+  int valeur_retour = 0;
+  if (pfile) {
+    if (pfile->nb_elements == 0
+        && pfile->pointeur_tete == NULL
+        && pfile->pointeur_queue == NULL) {
+    }
+    else if (pfile->nb_elements != 0
+             && pfile->pointeur_tete != NULL
+             && pfile->pointeur_queue != NULL) {
+      valeur_retour = pfile->nb_elements;
+    }
+    else {
+      valeur_retour = -1;
+    }
+  }
+  return valeur_retour;
+}

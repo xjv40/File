@@ -4,6 +4,10 @@
 #include "file.h"
 
 int main(void) {
+  // File* pfile = creation_file(10);
+  Element* pelement = creation_element(5);
+
+  printf("%d\n", pelement->valeur);
   return 0;
 }
 
@@ -18,11 +22,11 @@ Element* creation_element(int valeur) {
 File* creation_file(int taille) {
   File* pfile = (File*) malloc(sizeof(File));
   if (pfile) {
-  pfile->element = NULL;
-  pfile->pointeur_tete = NULL;
-  pfile->pointeur_queue = NULL;
-  pfile->taille = taille;
-  pfile->nb_elements = 0;
+    pfile->element = NULL;
+    pfile->pointeur_tete = NULL;
+    pfile->pointeur_queue = NULL;
+    pfile->taille = taille;
+    pfile->nb_elements = 0;
   }
   return pfile;
 }

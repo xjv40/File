@@ -11,4 +11,6 @@ struct File {
   int nb_elements;
 };
 
+File* creation_file(int taille);
+
 #endif // __FILE

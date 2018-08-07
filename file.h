@@ -22,5 +22,6 @@ int enfiler(File* pfile, Element* pelement);
 int nb_elements(File* pfile);
 bool est_vide(File* pfile);
 Element* defiler(File* pfile);
+void afficher_file(File* pfile);
 
 #endif // __FILE

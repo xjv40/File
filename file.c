@@ -106,3 +106,14 @@ bool est_vide(File* pfile) {
   }
   return valeur_retour;
 }
+
+void afficher_file(File* pfile) {
+  if (!pfile || !pfile->pointeur_tete || !pfile->pointeur_queue) {
+    return;
+  }
+  Element* ptempElement = pfile->pointeur_tete;
+  do {
+    printf("%d\n", ptempElement->valeur);
+    ptempElement = ptempElement->element_suivant;
+  } while(ptempElement);
+}

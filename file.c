@@ -49,13 +49,15 @@ int enfiler(File* pfile, Element* pelement) {
       if (!pfile->pointeur_tete) {
         pfile->pointeur_tete = pelement;
       }
-
       if (!pfile->pointeur_queue) {
         pfile->pointeur_queue = pelement;
       }
-
-      pelement->element_suivant = pfile->pointeur_queue;
-      pfile->pointeur_queue = pelement;
+      else {
+        Element* ptempElement = pfile->pointeur_queue;
+        ptempElement->element_suivant = pelement;
+        pfile->pointeur_queue = pelement;
+        pelement->element_suivant = NULL;
+      }
       pfile->nb_elements++;
 
       valeur_retour = 0;

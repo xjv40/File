@@ -64,6 +64,16 @@ int enfiler(File* pfile, Element* pelement) {
   return valeur_retour;
 }
 
+Element* defiler(File* pfile) {
+  if (!pfile || !pfile->pointeur_tete) {
+    return NULL;
+  }
+  Element* ptempElement = pfile->pointeur_tete;
+  pfile->pointeur_tete = ptempElement->element_suivant;
+  pfile->nb_elements--;
+  return ptempElement;
+}
+
 int nb_elements(File* pfile) {
   int valeur_retour = 0;
   if (pfile) {
